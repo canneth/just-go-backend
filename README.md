@@ -23,9 +23,9 @@ I have yet to begin work on this backend, so at the moment, you may consider it 
 However, I have a rough idea on the endpoints that I will need to implement in this backend, and I shall use this README.md to present and organise my ideas as I proceed with development.
 As this will be a living document, expect there to be frequent changes.
 
-<h3>API endpoints</h3>
+<h2>API endpoints</h2>
 <section>
-  <h4>GET: <code>/search?q=[rawSearchInput]</code></h4>
+  <h3>GET: <code>/search?q=[rawSearchInput]</code></h3>
   <b>When this is called</b><br />
   On the <a href='https://justgo.dev/search' rel='noreferrer'>search page</a>, when the user submits a search.
   <br /><br />
