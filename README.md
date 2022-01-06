@@ -28,10 +28,10 @@ As this will be a living document, expect there to be frequent changes.
 <h2>API endpoints</h2>
 <ul>
   <li>
-    <summary><h3>GET: <code>/search?q=[rawSearchInput]</code></h3></summary>
-    <detail>
+    <h3>GET: <code>/search?q=[rawSearchInput]</code></h3>
+    <details>
     Returns a list of places, each with place details and corresponding hyperlocal weather data (current and 2hr forecast).
-    </detail>
+    </details>
     <h4>Parameters</h4>
     <ul>
       <li><code>rawSearchInput</code> - The raw input, as entered and submitted.</li>
