@@ -30,12 +30,11 @@ As this will be a living document, expect there to be frequent changes.
   <li>
     <h3>GET: <code>/search?q=[rawSearchInput]</code></h3>
     Returns a list of places, each with place details and corresponding hyperlocal weather data (current and 2hr forecast).
-    <h5>Parameters</h5>
+    <h4>Parameters</h4>
     <ul>
       <li><code>rawSearchInput</code> - The raw input, as entered and submitted.</li>
     </ul>
-    <br /><br />
-    <b>What should happen before the response is returned</b><br />
+    <h4>What should happen before the response is returned</h4>
     <ol>
       <li>Sanitise and format <code>rawSearchInput</code> for use in the API call to the place API.</li>
       <li>Call the place API and receive a list of matching places as <code>rawPlaceList</code>.</li>
