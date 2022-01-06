@@ -24,7 +24,7 @@ However, I have a rough idea on the endpoints that I will need to implement in t
 As this will be a living document, expect there to be frequent changes.
 
 <h2>API endpoints</h2>
-<ol>
+<ul>
   <li>
     <h3>GET: <code>/search?q=[rawSearchInput]</code></h3>
     Returns a list of places, each with place details and corresponding hyperlocal weather data (current and 2hr forecast).
@@ -58,4 +58,4 @@ As this will be a living document, expect there to be frequent changes.
       <li>Return <code>augmentedPlaceList</code> as the response.</li>
     </ol>
   </li>
-</ol>
+</ul>
