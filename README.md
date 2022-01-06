@@ -1,4 +1,4 @@
-<header align='center'>
+<div align='center'>
   <h1>
     <div display='flex' align-items='center'>
       JustGo!
@@ -6,7 +6,7 @@
       <img src='https://user-images.githubusercontent.com/23531034/148373133-da36d27f-8f04-49f4-a7c1-ecefd5818801.png#gh-dark-mode-only' />
     </div>
   </h1>
-</header>
+</div>
 
 <p align='center'>
   Feel the sudden urge to be out and about, but just can't think of the place to go?
