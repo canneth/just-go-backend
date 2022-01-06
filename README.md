@@ -8,6 +8,8 @@
   </h1>
 </div>
 
+<br />
+
 <p align='center'>
   Feel the sudden urge to be out and about, but just can't think of the place to go?
   <br />
