@@ -27,7 +27,9 @@ As this will be a living document, expect there to be frequent changes.
 
 <h2>API endpoints</h2>
 <details>
-  <summary><b>GET: <code>/search?q=[rawSearchInput]</code></b></summary>
+  <summary>
+    <b>GET: <code>/search?q=[rawSearchInput]</code></b>
+  </summary>
   <br />
   Returns a list of places, each with place details and corresponding hyperlocal weather data (current and 2hr forecast).
   <h4>Parameters</h4>
@@ -44,20 +46,23 @@ As this will be a living document, expect there to be frequent changes.
     <li>Return <code>placeListWithWeather</code> as the response.</li>
   </ol>
 </details>
-  <li>
-    <h3>GET: <code>/user/favourites</code></h3>
-    Returns a list of places representing the favourites of the current user.
-    <h4>Parameters</h4>
-    <ul>
-      <li><code>rawSearchInput</code> - The raw input, as entered and submitted.</li>
-    </ul>
-    <h4>What should happen before the response is returned</h4>
-    <ol>
-      <li>If there is a session token, deserialise user from session.</li>
-      <li>Fetch a list of favourite places from from database, storing as <code>favouritesList</code>.</li>
-      <li>Call the weather API and receive weather data.</li>
-      <li>Combine place list and the corresponding weather data into a new list <code>favouritesListWithWeather</code>.</li>
-      <li>Return <code>placeListWithWeather</code></li>
-    </ol>
-  </li>
+<details>
+  <summary>
+    <b>GET: <code>/user/favourites</code></b>
+  </summary>
+  <br />
+  Returns a list of places representing the favourites of the current user.
+  <h4>Parameters</h4>
+  <ul>
+    <li><code>rawSearchInput</code> - The raw input, as entered and submitted.</li>
+  </ul>
+  <h4>What should happen before the response is returned</h4>
+  <ol>
+    <li>If there is a session token, deserialise user from session.</li>
+    <li>Fetch a list of favourite places from from database, storing as <code>favouritesList</code>.</li>
+    <li>Call the weather API and receive weather data.</li>
+    <li>Combine place list and the corresponding weather data into a new list <code>favouritesListWithWeather</code>.</li>
+    <li>Return <code>placeListWithWeather</code></li>
+  </ol>
+</details>
 </ul>
