@@ -29,6 +29,7 @@ As this will be a living document, expect there to be frequent changes.
 <ul>
   <li>
     <h3>GET: <code>/search?q=[rawSearchInput]</code></h3>
+    <summary>Test</summary>
     <details>
     Returns a list of places, each with place details and corresponding hyperlocal weather data (current and 2hr forecast).
     </details>
