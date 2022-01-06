@@ -39,32 +39,25 @@ As this will be a living document, expect there to be frequent changes.
       <li>Sanitise and format <code>rawSearchInput</code> for use in the API call to the place API.</li>
       <li>Call the place API and receive a list of matching places as <code>rawPlaceList</code>.</li>
       <li>Call the weather API and receive weather data.</li>
-      <li>Combine place list and the corresponding weather data in a new list, <code>augmentedPlaceList</code>.</li>
-      <li>If the user is logged in, check the user's favourites to see if any of the places are favourites and mark them accordingly in <code>augmentedPlaceList</code>.</li>
-      <li>Return <code>augmentedPlaceList</code> as the response.</li>
+      <li>Combine place list and the corresponding weather data into a new list <code>placeList</code>.</li>
+      <li>If the user is logged in, check the user's favourites to see if any of the places are favourites and mark them accordingly in <code>placeListWithWeather</code>.</li>
+      <li>Return <code>placeListWithWeather</code> as the response.</li>
     </ol>
   </li>
   <li>
-    <h3>GET: <code>/[userId]/favourites</code></h3>
+    <h3>GET: <code>/user/favourites</code></h3>
     Returns a list of places representing the favourites of the current user.
-    <br /><br />
-    <b>When this is called</b>
-    <br />
-    On the <a href='https://justgo.dev/search' rel='noreferrer'>search page</a>, when the user submits a search.
-    <br /><br />
-    <b>Parameters</b>
-    <br />
+    <h4>Parameters</h4>
     <ul>
       <li><code>rawSearchInput</code> - The raw input, as entered and submitted.</li>
     </ul>
-    <br /><br />
-    <b>What should happen before the response is returned</b>
-    <br />
+    <h4>What should happen before the response is returned</h4>
     <ol>
-      <li>Sanitise and format <code>rawSearchInput</code> for use in the API call to the place API.</li>
-      <li>Call the place API and receive a list of matching places as <code>rawPlaceList</code>.</li>
-      <li>If the user is logged in, check the user's favourites to see if any of the places are favourites and mark them accordingly, storing the marked list as <code>augmentedPlaceList</code>.</li>
-      <li>Return <code>augmentedPlaceList</code> as the response.</li>
+      <li>If there is a session token, deserialise user from session.</li>
+      <li>Fetch a list of favourite places from from database, storing as <code>favouritesList</code>.</li>
+      <li>Call the weather API and receive weather data.</li>
+      <li>Combine place list and the corresponding weather data into a new list <code>favouritesListWithWeather</code>.</li>
+      <li>Return <code>placeListWithWeather</code></li>
     </ol>
   </li>
 </ul>
