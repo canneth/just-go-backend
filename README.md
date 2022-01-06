@@ -30,32 +30,36 @@ As this will be a living document, expect there to be frequent changes.
   <li>
     <h3>GET: <code>/search?q=[rawSearchInput]</code></h3>
     Returns a list of places, each with place details and corresponding hyperlocal weather data (current and 2hr forecast).
-    <br />
+    <br /><br />
     <b>Parameters</b>
     <br />
-    <code>rawSearchInput</code> - The raw input, as entered and submitted.
+    <ul>
+      <li><code>rawSearchInput</code> - The raw input, as entered and submitted.</li>
+    </ul>
     <br /><br />
     <b>What should happen before the response is returned</b><br />
     <ol>
       <li>Sanitise and format <code>rawSearchInput</code> for use in the API call to the place API.</li>
       <li>Call the place API and receive a list of matching places as <code>rawPlaceList</code>.</li>
-      <li>Call the weather API and receive weather data</li>
-      <li>Combine place list and the corresponding weather data in a new list, <code>augmentedPlaceList</code>.
-      <li>If the user is logged in, check the user's favourites to see if any of the places are favourites and mark them accordingly in <code>augmentedPlaceList</code>.
+      <li>Call the weather API and receive weather data.</li>
+      <li>Combine place list and the corresponding weather data in a new list, <code>augmentedPlaceList</code>.</li>
+      <li>If the user is logged in, check the user's favourites to see if any of the places are favourites and mark them accordingly in <code>augmentedPlaceList</code>.</li>
       <li>Return <code>augmentedPlaceList</code> as the response.</li>
     </ol>
   </li>
   <li>
     <h3>GET: <code>/[userId]/favourites</code></h3>
     Returns a list of places representing the favourites of the current user.
-    <br />
+    <br /><br />
     <b>When this is called</b>
     <br />
     On the <a href='https://justgo.dev/search' rel='noreferrer'>search page</a>, when the user submits a search.
     <br /><br />
     <b>Parameters</b>
     <br />
-    <code>rawSearchInput</code> - The raw input, as entered and submitted.
+    <ul>
+      <li><code>rawSearchInput</code> - The raw input, as entered and submitted.</li>
+    </ul>
     <br /><br />
     <b>What should happen before the response is returned</b>
     <br />
