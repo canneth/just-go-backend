@@ -25,7 +25,7 @@ As this will be a living document, expect there to be frequent changes.
 
 <h3>API endpoints</h3>
 <section>
-  <code>GET: /search?q=[rawSearchInput]</code>
+  <h4>GET: <code>/search?q=[rawSearchInput]</code></h4>
   <h5>When this is called</h5>
   <p>
     On the <a href='https://justgo.dev/search' rel='noreferrer'>search page</a>, when the user submits a search.
