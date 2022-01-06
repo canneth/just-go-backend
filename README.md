@@ -19,6 +19,8 @@
 <h2>Foreword</h2>
 This is my first crack at developing an entire web app, and this entire project is primarily a learning exercise in implementing a proper backend. This repo contains only the backend of this web app. To view the corresponding frontend repo, <a href='https://github.com/canneth/just-go-frontend' rel='noreferrer'>click here</a>.
 
+<br />
+
 <h2>Development status</h2>
 I have yet to begin work on this backend, so at the moment, you may consider it <strong>completely absent</strong>.
 <br /><br />
