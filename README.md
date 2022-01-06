@@ -1,73 +1,47 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+<header align='center'>
+  <h1>
+    <div display='flex' align-items='center'>
+      JustGo!
+      <img src='https://user-images.githubusercontent.com/23531034/148372740-681d6810-c6ef-4560-b64e-996db9079e1e.png#gh-light-mode-only' />
+      <img src='https://user-images.githubusercontent.com/23531034/148373133-da36d27f-8f04-49f4-a7c1-ecefd5818801.png#gh-dark-mode-only' />
+    </div>
+  </h1>
+</header>
+
+<p align='center'>
+  Feel the sudden urge to be out and about, but just can't think of the place to go?
+  <br />
+  This humble app helps you decide on that special somewhere!
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h2>Foreword</h2>
+This is my first crack at developing an entire web app, and this entire project is primarily a learning exercise in implementing a proper backend. This repo contains only the backend of this web app. To view the corresponding frontend repo, <a href='https://github.com/canneth/just-go-frontend' rel='noreferrer'>click here</a>.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<h2>Development status</h2>
+I have yet to begin work on this backend, so at the moment, you may consider it <strong>completely absent</strong>.
+<br />
+However, I have a rough idea on the endpoints that I will need to implement in this backend, and I shall use this README.md to present and organise my ideas as I proceed with development.
+As this will be a living document, expect there to be frequent changes.
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+<h3>API endpoints</h3>
+<section>
+  <code>GET: /search?q=[rawSearchInput]</code>
+  <h5>When this is called</h5>
+  <p>
+    On the <a href='https://justgo.dev/search' rel='noreferrer'>search page</a>, when the user submits a search.
+  </p>
+  <h5>Parameters</h5>
+  <p>
+    <code>rawSearchInput</code> - The raw input, as entered and submitted.
+  </p>
+  <h5>What should happen before the response is returned</h5>
+  <p>
+    <ol>
+      Sanitise and format <code>rawSearchInput</code> for use in the API call to the place API.
+      Call the place API and receive a list of matching places as <code>rawPlaceList</code>.
+      If the user is logged in, check the user's favourites to see if any of the places are favourites and mark them accordingly, storing the marked list as <code>augmentedPlaceList</code>.
+      Return <code>augmentedPlaceList</code> as the response.
+    </ol>
+  </p>
+  
+</section>
