@@ -34,7 +34,7 @@ As this will be a living document, expect there to be frequent changes.
   <p>
     <code>rawSearchInput</code> - The raw input, as entered and submitted.
   </p>
-  <h5>What should happen before the response is returned</h5>
+  <h5 class='extended-markdown tip border rounded-1 mb-4 p-3 color-border-accent-emphasis color-bg-accent f5'>What should happen before the response is returned</h5>
   <p>
     <ol>
       Sanitise and format <code>rawSearchInput</code> for use in the API call to the place API.
