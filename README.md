@@ -22,11 +22,10 @@ This is my first crack at developing an entire web app, and this entire project 
 <h2>Development status</h2>
 I have yet to begin work on this backend, so at the moment, you may consider it <strong>completely absent</strong>.
 <br /><br />
-As I plan out the endpoints I will be needing, I shall use this README.md to present and organise my ideas as I proceed with development.
-<br />
-As this will be a living document, expect there to be frequent changes.
+As I plan out the endpoints I will be needing, I shall use this README.md to present and organise my ideas as I proceed with development. As this will be a living document, expect there to be frequent changes.
 
 <h2>API endpoints</h2>
+
 <details>
   
   <summary>
