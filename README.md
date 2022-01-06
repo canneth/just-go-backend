@@ -28,7 +28,7 @@ As this will be a living document, expect there to be frequent changes.
 <h2>API endpoints</h2>
 <ul>
   <li>
-    <h3>GET: <code>/search?q=[rawSearchInput]</code></h3>
+    <summary><h3>GET: <code>/search?q=[rawSearchInput]</code></h3></summary>
     Returns a list of places, each with place details and corresponding hyperlocal weather data (current and 2hr forecast).
     <h4>Parameters</h4>
     <ul>
