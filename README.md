@@ -45,6 +45,7 @@ As this will be a living document, expect there to be frequent changes.
     <li>If the user is logged in, check the user's favourites to see if any of the places are favourites and mark them accordingly in <code>placeListWithWeather</code>.</li>
     <li>Return <code>placeListWithWeather</code> as the response.</li>
   </ol>
+  <hr />
 </details>
 <details>
   <summary>
