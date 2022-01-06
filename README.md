@@ -27,15 +27,20 @@ As this will be a living document, expect there to be frequent changes.
 
 <h2>API endpoints</h2>
 <details>
+  
   <summary>
     <b>GET: <code>/search?q=[rawSearchInput]</code></b>
   </summary>
+  
   <br />
+  
   Returns a list of places, each with place details and corresponding hyperlocal weather data (current and 2hr forecast).
+  
   <h4>Parameters</h4>
   <ul>
     <li><code>rawSearchInput</code> - The raw input, as entered and submitted.</li>
   </ul>
+  
   <h4>What should happen before the response is returned</h4>
   <ol>
     <li>Sanitise and format <code>rawSearchInput</code> for use in the API call to the place API.</li>
@@ -45,18 +50,26 @@ As this will be a living document, expect there to be frequent changes.
     <li>If the user is logged in, check the user's favourites to see if any of the places are favourites and mark them accordingly in <code>placeListWithWeather</code>.</li>
     <li>Return <code>placeListWithWeather</code> as the response.</li>
   </ol>
+  
   <hr />
+  
 </details>
+
 <details>
+  
   <summary>
     <b>GET: <code>/user/favourites</code></b>
   </summary>
+  
   <br />
+  
   Returns a list of places representing the favourites of the current user.
+  
   <h4>Parameters</h4>
   <ul>
     <li><code>rawSearchInput</code> - The raw input, as entered and submitted.</li>
   </ul>
+  
   <h4>What should happen before the response is returned</h4>
   <ol>
     <li>If there is a session token, deserialise user from session.</li>
@@ -65,5 +78,7 @@ As this will be a living document, expect there to be frequent changes.
     <li>Combine place list and the corresponding weather data into a new list <code>favouritesListWithWeather</code>.</li>
     <li>Return <code>placeListWithWeather</code></li>
   </ol>
+  
+  <hr />
+  
 </details>
-</ul>
