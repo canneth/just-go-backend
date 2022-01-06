@@ -17,7 +17,7 @@
 <br />
 
 <h2>Foreword</h2>
-This project serves primarily as a meaningful reason for me to get my hands dirty learning TypeScript, NestJS, PassportJS, Mongoose, and developing a proper backend in general. This repo contains only the backend of this web app. To view the corresponding frontend repo, <a href='https://github.com/canneth/just-go-frontend' rel='noreferrer'>click here</a>.
+This project serves primarily as a meaningful reason for me to get my hands dirty learning TypeScript, NestJS, PassportJS, Mongoose, and backend development in general. This repo contains only the backend of this web app. To view the corresponding frontend repo, <a href='https://github.com/canneth/just-go-frontend' rel='noreferrer'>click here</a>.
 
 <h2>Development status</h2>
 I have yet to begin work on this backend, so at the moment, you may consider it <strong>completely absent</strong>.
